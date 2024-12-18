@@ -15,12 +15,26 @@ class Circle{
     double getArea(){
         return Math.PI * radius * radius;
     }
+    double getCircumference(){
+        return 2 * Math.PI * radius;
+    }
     
 }
 
 public class Q4{
     public static void main(String[] args){
-        Circle circle = new Circle(7);
-        System.out.println(circle.getArea());
+
+        double r;
+        r=7;
+        Circle circle = new Circle(r);
+
+        System.out.println("Circle area is " + circle.getArea());
+         System.out.println("Circle Circumference is " + circle.getCircumference());
+        System.out.println();
+         r=9;
+         circle.setRadius(9);
+          System.out.println("Circle area is " + circle.getArea());
+         System.out.println("Circle Circumference is " + circle.getCircumference());
+
     }
 }
