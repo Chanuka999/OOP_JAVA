@@ -38,8 +38,16 @@ public class Q8{
     public static void main(String[] args){
         TrafficLight light = new TrafficLight("red",30);
 
-        System.out.println("The light is red" + light.isRed());
+        System.out.println("The light is red :" + light.isRed());
 
-         System.out.println("The light is green" + light.isGreen());
+         System.out.println("The light is green :" + light.isGreen());
+
+         light.ChangeColor("green");
+
+         System.out.println("After changing color:");
+
+         System.out.println("The light is red :" + light.isRed());
+
+         System.out.println("The light is green :" + light.isGreen());
     }
 }
