@@ -23,7 +23,7 @@ class School{
         teachers.add(teacher);
     }
 
-    void removeStudent(Teacher teacher){
+    void removeTeacher(Teacher teacher){
         teachers.remove(teacher);
     }
 
@@ -167,13 +167,13 @@ public class Q14{
           mathsClass.addStudent(student3);
 
            SchoolClass itClass = new SchoolClass("Infomation Technology", teacher1);
-          mathsClass.addStudent(student1);
-          mathsClass.addStudent(student3);
-           mathsClass.addStudent(student4);
+          itClass.addStudent(student1);
+          itClass.addStudent(student3);
+           itClass.addStudent(student4);
 
            SchoolClass scienceClass = new SchoolClass("science", teacher3);
-          mathsClass.addStudent(student1);
-          mathsClass.addStudent(student2);
+          scienceClass.addStudent(student1);
+          scienceClass.addStudent(student2);
          
            school.addSchoolClass(mathsClass);
            school.addSchoolClass(itClass);
@@ -191,9 +191,24 @@ public class Q14{
           System.out.println("Teacher : " + mathsClass.getTeacher().getTeacherName());
           System.out.println("Number of Students : " + mathsClass.getStudents().size());
 
+           System.out.println("\n***IT Class Information***");
+          System.out.println("class name : " + itClass.getClassName());
+          System.out.println("Teacher : " + itClass.getTeacher().getTeacherName());
+          System.out.println("Number of Students : " + itClass.getStudents().size());
+
+           System.out.println("\n***Science Class Information***");
+          System.out.println("class name : " + scienceClass.getClassName());
+          System.out.println("Teacher : " + scienceClass.getTeacher().getTeacherName());
+          System.out.println("Number of Students : " + scienceClass.getStudents().size());
 
 
+         school.removeStudent(student2);
+         school.removeTeacher(teacher1);
+         school.removeSchoolClass(mathsClass);
 
-
+       System.out.println("\n***after removing***");
+           System.out.println("Number of students : " + school.getStudents().size());
+           System.out.println("Number of teachers : " + school.getTeachers().size());
+           System.out.println("Number of classes : " + school.getClasses().size());
     }
 }
