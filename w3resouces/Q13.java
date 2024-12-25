@@ -63,7 +63,7 @@ public class Q13{
         
         Product product1 = new Product("laptop", 500);
          Product product2 = new Product("monitor", 50);
-          Product product3 = new Product("keyboard", 750);
+          Product product3 = new Product("keyboard", 60);
 
 
          System.out.println("add three products:");
@@ -73,6 +73,11 @@ public class Q13{
 
         System.out.println("\nCheck low products:");
         inventory.lowInventory();
+
+         System.out.println("\nremove Products:");
+         inventory.removeProduct(product2);
+
+         inventory.lowInventory();
         
 
     }
