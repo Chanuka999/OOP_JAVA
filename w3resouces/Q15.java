@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 class Song{
     private String title;
@@ -21,7 +22,7 @@ class Song{
         return artist;
     }
 
-    String setArtist(String artist){
+    void setArtist(String artist){
         this.artist=artist;
     }
 
@@ -57,7 +58,7 @@ class MusicLaboratary{
     Random rand = new Random();
 
     int index = rand.nextInt(size);
-    System.out.println("Now playing" + songs.getIndex(index).getTitle()  + "by" + songs.get(index).getArtist());
+    System.out.println("Now playing " + songs.get(index).getTitle()  + " by " + songs.get(index).getArtist());
    }
 }
 
@@ -67,8 +68,8 @@ public class Q15{
         MusicLaboratary library = new MusicLaboratary();
 
         Song  song1 = new Song("pem sihine", "chanuka");
-          Song  song1 = new Song("nadhen", "randitha");
-            Song  song1 = new Song("piyamennee", "kamal");
+          Song  song2 = new Song("nadhen", "randitha");
+            Song  song3 = new Song("piyamennee", "kamal");
 
             library.addSongs(song1);
              library.addSongs(song2);
@@ -77,7 +78,7 @@ public class Q15{
               System.out.println("All songs:");
 
               for(Song song :library.getSongs()){
-                System.out.println(song.getTitle() + "by" + song.getArtist());
+                System.out.println(song.getTitle() + " by " + song.getArtist());
               }
 
               System.out.println("\n Playing Ramdom songs:");
